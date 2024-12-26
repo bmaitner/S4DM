@@ -1,6 +1,6 @@
 #' @name fit_plug_and_play
 #' @title Fit presence-background distribution models in a plug-and-play framework.
-#' @description This function fits presence-background species distribution models for the specified plug-and-play methods.
+#' @description This function fits presence-background species distribution models for the specified plug-and-play methods \insertCite{Drake2018-ha,Drake2015-sb}{S4DM}.
 #' @param presence dataframe of covariates at presence points
 #' @param background Optional. Dataframe of covariates at background points
 #' @param method Optional. If supplied, both presence and background density estimation will use this method.
@@ -15,6 +15,46 @@
 #' @details Current methods include: "gaussian", "kde","vine","rangebagging", "lobagoc", and "none".
 #' @export
 #' @return List of class "pnp_model" containing model objects and metadata needed for projecting the fitted models.
+#' @importFrom Rdpack reprompt
+#' @references
+#' \insertAllCited{}
+#' @examples \donttest{
+#'
+#'# load in sample data
+#'
+#'  library(S4DM)
+#'  library(terra)
+#'
+#'  # occurrence points
+#'    data("sample_points")
+#'    occurrences <- sample_points
+#'
+#'  # environmental data
+#'    env <- rast(system.file('ex/sample_env.tif', package="S4DM"))
+#'
+#'  # rescale the environmental data
+#'
+#'    env <- scale(env)
+#'
+#'  # Get presence environmental data
+#'
+#'   pres_env <- get_env_pres(coords = occurrences,
+#'                            env = env)
+#'
+#' # Get background environmental data
+#'
+#'  bg_env <- get_env_bg(coords = occurrences,
+#'                       env = env,width = 100000)
+#'
+#'
+#' # Note that the functions to get the environmental data return lists,
+#' # and only the "env" element of these is used in the fit function
+#'
+#'   kde_fit <- fit_plug_and_play (presence = pres_env$env,
+#'                                 background = bg_env$env,
+#'                                 method = "kde")
+#'
+#' }
 fit_plug_and_play <- function(presence = NULL,
                               background = NULL,
                               method = NULL,

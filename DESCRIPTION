@@ -48,7 +48,8 @@ Imports:
   rvinecopulib,
   sf,
   terra,
-  dplyr
+  dplyr,
+  Rdpack
 Suggests:
   geodata,
   BIEN,
@@ -56,3 +57,5 @@ Suggests:
   tidyterra,
   knitr,
   testthat
+RdMacros:
+  Rdpack

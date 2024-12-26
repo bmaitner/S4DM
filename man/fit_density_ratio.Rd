@@ -19,7 +19,8 @@ fit_density_ratio(presence = NULL, background = NULL, method = NULL, ...)
 List of class "dr_model" containing model objects and metadata needed for projecting the fitted models.
 }
 \description{
-This function fits density-ratio species distribution models for the specified density-ratio method.
+This function fits density-ratio species distribution models for
+the specified density-ratio method \insertCite{Drake2018-ha}{S4DM}.
 }
 \details{
 Current methods include: "ulsif", "rulsif", "maxnet"
@@ -57,6 +58,12 @@ Current methods include: "ulsif", "rulsif", "maxnet"
 # Note that the functions to get the environmental data return lists,
 # and only the "env" element of these is used in the fit function
 
+rulsif_fit <- fit_density_ratio(presence = pres_env$env,
+                               background = bg_env$env,
+                               method = "rulsif")
 
 }
+}
+\references{
+\insertAllCited{}
 }

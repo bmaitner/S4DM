@@ -20,9 +20,12 @@ pnp_lobagoc(data, method, object = NULL, v = 100, nu = 0.01, sigma = NULL)
 \item{sigma}{NULL or Numeric.  Tuning parameter of rbf kernel, will estimate if left NULL (default).}
 }
 \description{
-This function both fits lobgaoc distributions and projects those distributions to new covariates..
+This function both fits lobgaoc distributions \insertCite{Drake2014-qz}{S4DM} and projects those distributions to new covariates.
 }
 \details{
 For fitting, an object is not required (and will be ignored). For prediction, parameters v,nu,and sigma are not needed and will be ignored.
+}
+\references{
+\insertAllCited{}
 }
 \keyword{internal}

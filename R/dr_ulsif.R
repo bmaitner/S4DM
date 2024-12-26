@@ -1,5 +1,6 @@
 #' @name dr_ulsif
 #' @title Density-ratio SDM estimation with uLSIF
+#' @description dr_ulsif is an internal function for density-ratio estimation with uLSIF \insertCite{Kanamori2009-pz}{S4DM}.
 #' @param presence_data dataframe of covariates
 #' @param background_data dataframe of covariates
 #' @param projection_data dataframe of covariates
@@ -8,9 +9,11 @@
 #' @param kernel_num kernel_number for uLSIF. Default is the uLSIF default.
 #' @param method one of either "fit" or "predict"
 #' @param object fitted object returned by a dr_... function. Only needed when method = "predict"
-#' @description dr_ulsif is an internal function for density-ratio estimation with uLSIF
 #' @importFrom densratio uLSIF
+#' @importFrom Rdpack reprompt
 #' @keywords internal
+#' @references
+#' \insertAllCited{}
 dr_ulsif <- function(presence_data = NULL,
                      background_data = NULL,
                      projection_data = NULL,

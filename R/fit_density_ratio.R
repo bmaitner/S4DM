@@ -1,14 +1,18 @@
 #' @name fit_density_ratio
 #' @title Fit density-ratio distribution models in a plug-and-play framework.
-#' @description This function fits density-ratio species distribution models for the specified density-ratio method.
+#' @description This function fits density-ratio species distribution models for
+#' the specified density-ratio method \insertCite{Drake2018-ha}{S4DM}.
 #' @param presence dataframe of covariates at presence points
 #' @param background Dataframe of covariates at background points
 #' @param method Character. See "notes" for options.
 #' @param ... Additional parameters passed to internal functions.
 #' @details Current methods include: "ulsif", "rulsif", "maxnet"
-#' @export
 #' @return List of class "dr_model" containing model objects and metadata needed for projecting the fitted models.
 #' @export
+#' @importFrom Rdpack reprompt
+#' @importFrom Rdpack reprompt
+#' @references
+#' \insertAllCited{}
 #' @examples \donttest{
 #'
 #'# load in sample data
@@ -41,9 +45,9 @@
 #' # Note that the functions to get the environmental data return lists,
 #' # and only the "env" element of these is used in the fit function
 #'
-# rulsif_fit <- fit_density_ratio(presence = pres_env$env,
-#                                background = bg_env$env,
-#                                method = "rulsif")
+#' rulsif_fit <- fit_density_ratio(presence = pres_env$env,
+#'                                background = bg_env$env,
+#'                                method = "rulsif")
 #'
 #' }
 fit_density_ratio <- function(presence = NULL,

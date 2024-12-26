@@ -20,9 +20,12 @@ pnp_rangebagging(data, method, object = NULL, v = 100, d = 2, p = 0.5)
 \item{p}{Numeric.  Fraction of observations (i.e. occurrences) to use in each replicate aggregation. Default is 0.5}
 }
 \description{
-This function both fits rangebagging distributions and projects those distributions to new covariates.
+This function both fits rangebagging models \insertCite{Drake2015-sb}{S4DM} and projects those distributions to new covariates.
 }
 \details{
 For fitting, an object is not required (and will be ignored). For prediction, parameters v,p,and d are not needed and will be ignored.
+}
+\references{
+\insertAllCited{}
 }
 \keyword{internal}

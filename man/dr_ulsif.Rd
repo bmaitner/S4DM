@@ -34,6 +34,9 @@ dr_ulsif(
 \item{object}{fitted object returned by a dr_... function. Only needed when method = "predict"}
 }
 \description{
-dr_ulsif is an internal function for density-ratio estimation with uLSIF
+dr_ulsif is an internal function for density-ratio estimation with uLSIF \insertCite{Kanamori2009-pz}{S4DM}.
+}
+\references{
+\insertAllCited{}
 }
 \keyword{internal}

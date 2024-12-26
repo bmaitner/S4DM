@@ -1,5 +1,6 @@
 #' @name dr_rulsif
 #' @title Density-ratio SDM estimation with RuLSIF
+#' @description dr_rulsif is an internal function for density-ratio estimation with RuLSIF \insertCite{Kanamori2009-pz,Yamada2013-ra}{S4DM}.
 #' @param presence_data dataframe of covariates
 #' @param background_data dataframe of covariates
 #' @param projection_data dataframe of covariates
@@ -9,9 +10,11 @@
 #' @param alpha Relative parameter.  Defaults to RuLSIF default.
 #' @param method one of either "fit" or "predict"
 #' @param object fitted object returned by a dr_... function. Only needed when method = "predict"
-#' @description dr_rulsif is an internal function for density-ratio estimation with RuLSIF
 #' @importFrom densratio RuLSIF
+#' @importFrom Rdpack reprompt
 #' @keywords internal
+#' @references
+#' \insertAllCited{}
 dr_rulsif <- function(presence_data = NULL,
                      background_data = NULL,
                      projection_data = NULL,

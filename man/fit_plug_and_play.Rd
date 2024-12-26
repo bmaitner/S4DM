@@ -38,11 +38,53 @@ or "doublebag" (presence and background functions are bootstrapped).}
 List of class "pnp_model" containing model objects and metadata needed for projecting the fitted models.
 }
 \description{
-This function fits presence-background species distribution models for the specified plug-and-play methods.
+This function fits presence-background species distribution models for the specified plug-and-play methods \insertCite{Drake2018-ha,Drake2015-sb}{S4DM}.
 }
 \details{
 Current methods include: "gaussian", "kde","vine","rangebagging", "lobagoc", and "none".
 }
 \note{
 Either \code{method} or both \code{presence_method} and \code{background_method} must be supplied.
+}
+\examples{
+\donttest{
+
+# load in sample data
+
+ library(S4DM)
+ library(terra)
+
+ # occurrence points
+   data("sample_points")
+   occurrences <- sample_points
+
+ # environmental data
+   env <- rast(system.file('ex/sample_env.tif', package="S4DM"))
+
+ # rescale the environmental data
+
+   env <- scale(env)
+
+ # Get presence environmental data
+
+  pres_env <- get_env_pres(coords = occurrences,
+                           env = env)
+
+# Get background environmental data
+
+ bg_env <- get_env_bg(coords = occurrences,
+                      env = env,width = 100000)
+
+
+# Note that the functions to get the environmental data return lists,
+# and only the "env" element of these is used in the fit function
+
+  kde_fit <- fit_plug_and_play (presence = pres_env$env,
+                                background = bg_env$env,
+                                method = "kde")
+
+}
+}
+\references{
+\insertAllCited{}
 }

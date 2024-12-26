@@ -1,6 +1,6 @@
 #' @name pnp_rangebagging
 #' @title Internal function for rangebagging in plug-and-play SDMs.
-#' @description This function both fits rangebagging distributions and projects those distributions to new covariates.
+#' @description This function both fits rangebagging models \insertCite{Drake2015-sb}{S4DM} and projects those distributions to new covariates.
 #' @param data dataframe of covariates
 #' @param method one of either "fit" or "predict"
 #' @param object fitted object returned by a pnp_... function. Only needed when method = "predict"
@@ -10,6 +10,8 @@
 #' @details For fitting, an object is not required (and will be ignored). For prediction, parameters v,p,and d are not needed and will be ignored.
 #' @import geometry
 #' @keywords internal
+#' @references
+#' \insertAllCited{}
 pnp_rangebagging <- function(data, method, object = NULL, v = 100, d = 2, p = 0.5){
 
   #Code to check inputs

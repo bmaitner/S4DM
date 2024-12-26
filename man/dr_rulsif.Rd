@@ -37,6 +37,9 @@ dr_rulsif(
 \item{object}{fitted object returned by a dr_... function. Only needed when method = "predict"}
 }
 \description{
-dr_rulsif is an internal function for density-ratio estimation with RuLSIF
+dr_rulsif is an internal function for density-ratio estimation with RuLSIF \insertCite{Kanamori2009-pz,Yamada2013-ra}{S4DM}.
+}
+\references{
+\insertAllCited{}
 }
 \keyword{internal}
