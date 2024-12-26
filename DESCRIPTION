@@ -14,7 +14,7 @@ Authors@R:
            email = "r.richards@gatech.edu"),
            person(given = "Ben S.",
            family = "Carlson",
-           role = c("ctb"),
+           role = c("aut"),
            email = "ben.s.carlson@gmail.com"),
            person(given = "John M.",
            family = "Drake",
