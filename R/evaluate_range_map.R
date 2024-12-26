@@ -1,5 +1,5 @@
 #' @name evaluate_range_map
-#' @title Evaluate PBSDM range map quality
+#' @title Evaluate S4DM range map quality
 #' @description This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality.
 #' @param occurrences Presence coordinates in long,lat format.
 #' @param env Environmental rasters

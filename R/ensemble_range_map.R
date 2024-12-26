@@ -1,5 +1,5 @@
 #' @name ensemble_range_map
-#' @title Generate ensemble predictions from PBSDM range maps
+#' @title Generate ensemble predictions from S4DM range maps
 #' @description This function evaluates model quality and creates an ensemble of the model outputs.
 #' This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality.
 #' @param occurrences Presence coordinates in long,lat format.

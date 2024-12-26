@@ -21,7 +21,7 @@ get_functions <- function(type = "pnp"){
 
   # Get fxs
 
-    fxs <- data.frame(fx = ls(getNamespace("pbsdm"), all.names=TRUE))
+    fxs <- data.frame(fx = ls(getNamespace("S4DM"), all.names=TRUE))
 
   # Filter fxs
 

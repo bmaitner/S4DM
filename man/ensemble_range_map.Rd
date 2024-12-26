@@ -2,7 +2,7 @@
 % Please edit documentation in R/ensemble_range_map.R
 \name{ensemble_range_map}
 \alias{ensemble_range_map}
-\title{Generate ensemble predictions from PBSDM range maps}
+\title{Generate ensemble predictions from S4DM range maps}
 \usage{
 ensemble_range_map(
   occurrences,
