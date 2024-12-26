@@ -10,7 +10,7 @@
 #' "numbag" (presence function is bootstrapped),
 #' or "doublebag" (presence and background functions are bootstrapped).
 #' @param bootstrap_reps Integer.  Number of bootstrap replicates to use (default is 100)
-#' @param quantile Quantile to use for thresholding.  Default is 0.05 (5 pct training presence). Set to 0 for minimum trainin presence (MTP), set to NULL to return continuous raster.
+#' @param quantile Quantile to use for thresholding.  Default is 0.05 (5 pct training presence). Set to 0 for minimum training presence (MTP), set to NULL to return continuous raster.
 #' @param background_buffer_width The width (in m for unprojected rasters and map units for projected rasters) of the buffer to use for background data.
 #' Defaults to NULL, which will take the maximum distance between occurrence records.
 #' @param constraint_regions See get_env_bg documentation

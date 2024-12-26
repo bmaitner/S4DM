@@ -1,12 +1,12 @@
-#'Density-ratio SDM estimation with MAXNET
+#'Density-ratio SDM estimation with Maxnet
 #'
-#'dr_maxnet is an internal function for density-ratio estimation with MAXNET
+#'dr_maxnet is an internal function for density-ratio estimation with Maxnet
 #' @param presence_data dataframe of covariates
 #' @param background_data dataframe of covariates
 #' @param projection_data dataframe of covariates
-#' @param f MAXNET formula to use. Default (NULL) will use the MAXNET default.
-#' @param regmult MAXNET regularization multiplier. Default is 1.
-#' @param regfun MAXNET regularization function. Default is the MAXNET default.
+#' @param f Maxnet formula to use. Default (NULL) will use the Maxnet default.
+#' @param regmult Maxnet regularization multiplier. Default is 1.
+#' @param regfun Maxnet regularization function. Default is the Maxnet default.
 #' @param addsamplestobackground If TRUE (the default), any presences that aren't in the background will be added.
 #' @param clamp If TRUE (the default), predictions will be limited to ranges seen in the training dataset.
 #' @param type Type of response required.  Defaults to link, exponential, cloglog, and logistic.

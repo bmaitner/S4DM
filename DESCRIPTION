@@ -1,5 +1,5 @@
 Package: S4DM
-Title: Small Sample Size Species Distribution Modelling
+Title: Small Sample Size Species Distribution Modeling
 Version: 0.0.1
 Authors@R:
     c(
@@ -25,7 +25,7 @@ Authors@R:
            role = c("aut"),
            email = "cory.merow@gmail.com")
            )
-Description: This package implements multiple distribution modelling methods that are suited to species with small sample sizes (e.g., poorly sampled species or rare species).
+Description: This package implements multiple distribution modeling methods that are suited to species with small sample sizes (e.g., poorly sampled species or rare species).
 Depends: 
         R (>= 3.5.0)
 License: MIT + file LICENSE

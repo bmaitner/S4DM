@@ -24,7 +24,7 @@ This R package implements multiple species distribution modeling (SDM) methods t
 
 ### Plug-and-play models
 
-The plug-and-play SDM framework was developed by Drake and Richards (2018).  Plug-and-play models fit SDMs as the ratio of a presence distribution and a background distribution. Plug-and-play refers to the ability of the methodology to accommodate any method for estimating density functions (e.g., Gaussian, kernal-density estimation). Users are thus able to choose from multiple methods for estimating SDMs using an evolving set of methods within one unified framework.
+The plug-and-play SDM framework was developed by Drake and Richards (2018).  Plug-and-play models fit SDMs as the ratio of a presence distribution and a background distribution. Plug-and-play refers to the ability of the methodology to accommodate any method for estimating density functions (e.g., Gaussian, kernel-density estimation). Users are thus able to choose from multiple methods for estimating SDMs using an evolving set of methods within one unified framework.
 
 ### Density-ratio models
 
@@ -339,7 +339,7 @@ sample_points_gaussian_kde_predictions <- project_plug_and_play(pnp_model = samp
 
 ## Density-ratio models
 
-In addition to methods that estimate the presence and background distributions separately, the package accommodates methods that directly estimate the density ratio, including uLSIF and MaxNet.
+In addition to methods that estimate the presence and background distributions separately, the package accommodates methods that directly estimate the density ratio, including uLSIF and Maxnet.
 
 ```{r maxnet}
 

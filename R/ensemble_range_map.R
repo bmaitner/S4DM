@@ -18,7 +18,7 @@
 #' @note Either `method` or both `presence_method` and `background_method` must be supplied.
 #' @details Current plug-and-play methods include: "gaussian", "kde","vine","rangebagging", "lobagoc", and "none".
 #' Current density ratio methods include: "ulsif", "rulsif".
-#' @return List object containing elements (1) spatRaster ensemble layer showing the proportion of maps that are inclued in the range across the ensemble,
+#' @return List object containing elements (1) spatRaster ensemble layer showing the proportion of maps that are included in the range across the ensemble,
 #'  (2) spatRasters for individual models, and (3) model quality information.
 #' @importFrom pROC roc auc
 #' @importFrom terra app nlyr ncell

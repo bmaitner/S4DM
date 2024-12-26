@@ -1,6 +1,6 @@
 #' @name pnp_lobagoc
 #' @title Internal function for fitting lobagoc distributions in plug-and-play SDMs.
-#' @description This function both fits lobgaoc distributions \insertCite{Drake2014-qz}{S4DM} and projects those distributions to new covariates.
+#' @description This function both fits lobagoc distributions \insertCite{Drake2014-qz}{S4DM} and projects those distributions to new covariates.
 #' @param data dataframe of covariates
 #' @param method one of either "fit" or "predict"
 #' @param object fitted object returned by a pnp_... function. Only needed when method = "predict"

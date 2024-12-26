@@ -2,7 +2,7 @@
 % Please edit documentation in R/evaluate_range_map.R
 \name{evaluate_range_map}
 \alias{evaluate_range_map}
-\title{Evalute PBSDM range map quality}
+\title{Evaluate PBSDM range map quality}
 \usage{
 evaluate_range_map(
   occurrences,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/dr_maxnet.R
 \name{dr_maxnet}
 \alias{dr_maxnet}
-\title{Density-ratio SDM estimation with MAXNET}
+\title{Density-ratio SDM estimation with Maxnet}
 \usage{
 dr_maxnet(
   presence_data = NULL,
@@ -26,11 +26,11 @@ dr_maxnet(
 
 \item{projection_data}{dataframe of covariates}
 
-\item{f}{MAXNET formula to use. Default (NULL) will use the MAXNET default.}
+\item{f}{Maxnet formula to use. Default (NULL) will use the Maxnet default.}
 
-\item{regmult}{MAXNET regularization multiplier. Default is 1.}
+\item{regmult}{Maxnet regularization multiplier. Default is 1.}
 
-\item{regfun}{MAXNET regularization function. Default is the MAXNET default.}
+\item{regfun}{Maxnet regularization function. Default is the Maxnet default.}
 
 \item{addsamplestobackground}{If TRUE (the default), any presences that aren't in the background will be added.}
 
@@ -43,7 +43,7 @@ dr_maxnet(
 \item{object}{fitted object returned by a dr_... function. Only needed when method = "predict"}
 }
 \description{
-dr_maxnet is an internal function for density-ratio estimation with MAXNET
+dr_maxnet is an internal function for density-ratio estimation with Maxnet
 }
 \note{
 The options f, regmult, regfun, and addSamplestobackground are only used when method == "predict",

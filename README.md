@@ -1,7 +1,7 @@
-# Small Sample Size Species Distribution Modelling
+# Small Sample Size Species Distribution Modeling
 
 ## The S4DM R package
-This repository contains an R package that implements Species Distribution Modelling methods which work even when there are relatively few occurrence records (as is the case for poorly-sample or range-restricted species). These methods were primarily developed by the Drake lab, and include three types of methods: 1) Plug-and-play models, 2) environmental-range models, and 3) density-ratio models. Most of the important functions in this package are wrappers around existing functions that handle density estimation or density-ratio estimation.  Much of this code was created by modifying existing code at https://github.com/DrakeLab/PlugNPlay in order to make functions more modular and extensible.
+This repository contains an R package that implements Species Distribution Modeling methods which work even when there are relatively few occurrence records (as is the case for poorly-sample or range-restricted species). These methods were primarily developed by the Drake lab, and include three types of methods: 1) Plug-and-play models, 2) environmental-range models, and 3) density-ratio models. Most of the important functions in this package are wrappers around existing functions that handle density estimation or density-ratio estimation.  Much of this code was created by modifying existing code at https://github.com/DrakeLab/PlugNPlay in order to make functions more modular and extensible.
 
 ## How it works
 The package is build on a hierarchy of modular functions, each of which calls on lower-level functions:

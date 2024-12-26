@@ -44,7 +44,7 @@ or "doublebag" (presence and background functions are bootstrapped).}
 \item{...}{Additional parameters passed to internal functions.}
 }
 \value{
-List object containing elements (1) spatRaster ensemble layer showing the proportion of maps that are inclued in the range across the ensemble,
+List object containing elements (1) spatRaster ensemble layer showing the proportion of maps that are included in the range across the ensemble,
 (2) spatRasters for individual models, and (3) model quality information.
 }
 \description{
