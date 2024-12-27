@@ -1,5 +1,5 @@
 ===============
-# S4DM 0.0.0.9000
+# S4DM 0.0.1
 ===============
 
 ## NEW FEATURES
@@ -7,5 +7,3 @@
 * Initial development
 
 ## Bug fixes
-
-* Switch to terra and sf (from raster and sp)
