@@ -21,7 +21,7 @@ ensemble_range_map(
 \arguments{
 \item{occurrences}{Presence coordinates in long,lat format.}
 
-\item{env}{Environmental rasters}
+\item{env}{Environmental SpatRaster(s)}
 
 \item{method}{Optional. If supplied, both presence and background density estimation will use this method.}
 

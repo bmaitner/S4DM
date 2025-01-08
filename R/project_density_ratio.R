@@ -3,7 +3,7 @@
 #' @description This function projects fitted density-ratio species distribution models onto new covariates.
 #' @param dr_model A fitted density ratio model produced by `fit_density_ratio`
 #' @param data covariate data
-#' @return A vector of relative suitabilities evaluates at the covariates supplied in the data object.
+#' @return A vector of relative occurrence rates evaluated at the covariates supplied in the data object.
 #' @export
 project_density_ratio <- function(dr_model, data) {
 

@@ -147,6 +147,8 @@ test_that("rangebagging returns correct format", {
 
 test_that("vine returns correct format", {
 
+  skip_on_cran()
+
   library(S4DM)
   library(terra)
 

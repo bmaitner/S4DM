@@ -12,7 +12,7 @@ project_plug_and_play(pnp_model, data)
 \item{data}{covariate data}
 }
 \value{
-A vector of relative suitabilities evaluates at the covariates supplied in the data object.
+A vector of relative occurrence rates evaluated at the covariates supplied in the data object.
 }
 \description{
 This function projects fitted plug-and-play species distribution models onto new covariates.

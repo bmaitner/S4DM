@@ -2,7 +2,7 @@
 #' @title Extract presence data for SDM fitting.
 #' @description This function extracts presence data at known presence records.
 #' @param coords Coordinates (long,lat) to extract values for
-#' @param env Environmental rasterstack in any projection
+#' @param env Environmental SpatRaster(s) in any projection
 #' @param env_bg Background data produced by `get_env_bg`, used for re-scaling
 #' @importFrom terra extract
 #' @importFrom sf st_as_sf st_crs st_transform

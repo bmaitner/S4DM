@@ -14,3 +14,5 @@
 * This is a new release.
 
 ## Notes
+
+* Set the tests to omit fitting vine copulas on CRAN, as one of the tests caused an error on CRAN servers, but not in the other test environments.

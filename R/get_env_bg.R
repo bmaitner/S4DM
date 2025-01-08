@@ -2,7 +2,7 @@
 #' @title Extract background data for SDM fitting.
 #' @description This function extracts background data around known presence records.
 #' @param coords Coordinates (long,lat) to extract values for
-#' @param env Environmental rasterstack in any projection
+#' @param env Environmental SpatRaster(s) in any projection
 #' @param method Methods for getting bg points. Current option is buffer
 #' @param width Numeric or NULL.  Width (meters or map units) of buffer. If NULL, uses max dist between nearest occurrences.
 #' @param constraint_regions An optional spatialpolygons* object that can be used to limit the selection of background points.

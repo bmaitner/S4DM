@@ -3,7 +3,7 @@
 #' @description This function projects fitted plug-and-play species distribution models onto new covariates.
 #' @param pnp_model A fitted plug-and-play model produced by `fit_plug_and_play`
 #' @param data covariate data
-#' @return A vector of relative suitabilities evaluates at the covariates supplied in the data object.
+#' @return A vector of relative occurrence rates evaluated at the covariates supplied in the data object.
 #' @export
 #' @note The tsearchn function underlying rangebagging seems to fail sometimes with very uneven predictors. Rescaling helps.
 project_plug_and_play <- function(pnp_model, data) {

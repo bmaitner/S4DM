@@ -2,7 +2,7 @@
 #' @title Evaluate S4DM range map quality
 #' @description This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality.
 #' @param occurrences Presence coordinates in long,lat format.
-#' @param env Environmental rasters
+#' @param env Environmental SpatRaster(s)
 #' @param method Optional. If supplied, both presence and background density estimation will use this method.
 #' @param presence_method Optional. Method for estimation of presence density.
 #' @param background_method Optional. Method for estimation of background density.

@@ -9,7 +9,7 @@ get_env_pres(coords, env, env_bg = NULL)
 \arguments{
 \item{coords}{Coordinates (long,lat) to extract values for}
 
-\item{env}{Environmental rasterstack in any projection}
+\item{env}{Environmental SpatRaster(s) in any projection}
 
 \item{env_bg}{Background data produced by \code{get_env_bg}, used for re-scaling}
 }

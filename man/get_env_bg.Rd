@@ -16,7 +16,7 @@ get_env_bg(
 \arguments{
 \item{coords}{Coordinates (long,lat) to extract values for}
 
-\item{env}{Environmental rasterstack in any projection}
+\item{env}{Environmental SpatRaster(s) in any projection}
 
 \item{method}{Methods for getting bg points. Current option is buffer}
 
