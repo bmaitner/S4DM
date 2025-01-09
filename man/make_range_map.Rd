@@ -50,6 +50,9 @@ Defaults to NULL, which will take the maximum distance between occurrence record
 
 \item{...}{Additional parameters passed to internal functions.}
 }
+\value{
+A SpatRaster object containing a range map. Maps may be either binary or continuous, depending upon the \code{quantile} argument.
+}
 \description{
 This function produces range maps using plug-and-play modeling with either presence-background or density-ratio approaches.
 }

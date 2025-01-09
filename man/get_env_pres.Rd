@@ -13,6 +13,9 @@ get_env_pres(coords, env, env_bg = NULL)
 
 \item{env_bg}{Background data produced by \code{get_env_bg}, used for re-scaling}
 }
+\value{
+A list containing 1) the environmental data at the presence locations (env), and 2) an sf data.frame containing the occurrence records(occurrence_sf).
+}
 \description{
 This function extracts presence data at known presence records.
 }

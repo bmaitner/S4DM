@@ -8,11 +8,11 @@ dr_maxnet(
   presence_data = NULL,
   background_data = NULL,
   projection_data = NULL,
-  f = NULL,
+  formula = NULL,
   regmult = 1,
   regfun = maxnet.default.regularization,
-  addsamplestobackground = T,
-  clamp = T,
+  addsamplestobackground = TRUE,
+  clamp = TRUE,
   verbose = FALSE,
   method,
   type = c("link", "exponential", "cloglog", "logistic"),
@@ -26,7 +26,7 @@ dr_maxnet(
 
 \item{projection_data}{dataframe of covariates}
 
-\item{f}{Maxnet formula to use. Default (NULL) will use the Maxnet default.}
+\item{formula}{Maxnet formula to use. Default (NULL) will use the Maxnet default. This parameter is called "f" in the maxnet function, but is renamed here as using "t" and "f" as object names is frowned upon.}
 
 \item{regmult}{Maxnet regularization multiplier. Default is 1.}
 

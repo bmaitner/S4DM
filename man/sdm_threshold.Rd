@@ -12,13 +12,16 @@ sdm_threshold(
 )
 }
 \arguments{
-\item{prediction_raster}{Raster containing continuous predictions of "suitability" to be thresholded}
+\item{prediction_raster}{Raster containing continuous predictions of relative occurrence rate to be thresholded.}
 
 \item{occurrence_sf}{An sf object containing presence locations. Should be in the projection of the prediction raster}
 
 \item{quantile}{Numeric between 0 and 1. Quantile to use for thresholding (defaults to 0.05).  Set to 0 for minimum training presence.}
 
 \item{return_binary}{LOGICAL. Should the raster returned be binary (presence/absence)?  If FALSE, predicted presences will retain their 'suitability" scores.}
+}
+\value{
+A SpatRaster object containing a range map. Maps may be either binary or continuous, depending upon the \code{return_binary} argument.
 }
 \description{
 This function thresholds a continuous relative occurrence rate raster to produce a binary presence/absence raster.

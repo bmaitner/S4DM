@@ -46,6 +46,9 @@ or "doublebag" (presence and background functions are bootstrapped).}
 
 \item{...}{Additional parameters passed to internal functions.}
 }
+\value{
+A list containing 1) a data.frame containing cross-validated model performance statistics (fold_results), and 2) a data.frame containing model performance statistics evaluated on the full dataset (overall_results).
+}
 \description{
 This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality.
 }

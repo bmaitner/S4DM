@@ -27,7 +27,7 @@ get_env_bg(
 \item{standardize}{Logical. If TRUE, the variables will be scaled and centered}
 }
 \value{
-A list containing 1) the background data, 2) the cell indices for which the background was taken
+A list containing 1) the background data (env), 2) the cell indices for which the background was taken (buffer_cells), 3) the environmental means (env_mean; NA if standardization not done), and 4) the environmental standard deviations (env_sds; NA if standardization not done).
 }
 \description{
 This function extracts background data around known presence records.
