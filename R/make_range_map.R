@@ -17,6 +17,7 @@
 #' @param standardize_preds Logical. Should environmental layers be scaled? Default is TRUE.
 #' @param verbose Logical. If TRUE, prints progress messages.
 #' @param ... Additional parameters passed to internal functions.
+#' @return A SpatRaster object containing a range map. Maps may be either binary or continuous, depending upon the `quantile` argument.
 #' @note Either `method` or both `presence_method` and `background_method` must be supplied.
 #' @importFrom terra varnames<-
 #' @export

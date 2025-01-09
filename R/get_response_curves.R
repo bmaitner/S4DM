@@ -60,8 +60,8 @@ get_response_curves <- function(env_bg,
   # names(xTickLabs) <- best.var
 
   if(is.null(envMeans) | is.null(envSDs)) {
-    print("Response curves only work if your predictors are standardized. There's no error here; you just won't get response curve plots.")
-    return()
+    message("Response curves only work if your predictors are standardized. There's no error here; you just won't get response curve plots.")
+    return(invisible(NULL))
   }
 
 

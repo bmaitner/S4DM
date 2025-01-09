@@ -7,7 +7,7 @@
 #' @param width Numeric or NULL.  Width (meters or map units) of buffer. If NULL, uses max dist between nearest occurrences.
 #' @param constraint_regions An optional spatialpolygons* object that can be used to limit the selection of background points.
 #' @param standardize Logical. If TRUE, the variables will be scaled and centered
-#' @returns A list containing 1) the background data, 2) the cell indices for which the background was taken
+#' @returns A list containing 1) the background data (env), 2) the cell indices for which the background was taken (buffer_cells), 3) the environmental means (env_mean; NA if standardization not done), and 4) the environmental standard deviations (env_sds; NA if standardization not done).
 #' @note If supplying constraint_regions, any polygons in which the occurrences fall are considered fair game for background selection.
 #' This background selection is, however, still limited by the buffer as well.
 #' @importFrom  terra buffer vect extract

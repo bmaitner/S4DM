@@ -9,3 +9,7 @@
 ## Bug fixes
 
 * Modified the test for vine copula sdms to be skipped on CRAN, as the underlying c++ code seems to throw an error
+* In function dr_maxnet, renamed parameter "f" to "formula" and replace "T" with "TRUE" in the function, per CRAN comments.
+* In function get_response_curves, changed print() to message(), per CRAN comments.
+* Added references to the description, per CRAN comments.
+* Fixed missing documentation of the objects/values returned by some of the functions, per CRAN comments.

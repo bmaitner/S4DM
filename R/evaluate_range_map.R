@@ -15,6 +15,7 @@
 #' @param background_buffer_width Numeric or NULL.  Width (meters or map units) of buffer to use to select background environment. If NULL, uses max dist between nearest occurrences.
 #' @param standardize_preds Logical. Should environmental layers be scaled? Default is TRUE.
 #' @param ... Additional parameters passed to internal functions.
+#' @return A list containing 1) a data.frame containing cross-validated model performance statistics (fold_results), and 2) a data.frame containing model performance statistics evaluated on the full dataset (overall_results).
 #' @note Either `method` or both `presence_method` and `background_method` must be supplied.
 #' @details Current plug-and-play methods include: "gaussian", "kde","vine","rangebagging", "lobagoc", and "none".
 #' Current density ratio methods include: "ulsif", "rulsif".

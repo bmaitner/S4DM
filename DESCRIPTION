@@ -25,7 +25,7 @@ Authors@R:
            role = c("aut"),
            email = "cory.merow@gmail.com")
            )
-Description: Implements a set of distribution modeling methods that are suited to species with small sample sizes (e.g., poorly sampled species or rare species). While these methods can also be used on well-sampled taxa, they are united by the fact that they can be utilized with relatively few data points.
+Description: Implements a set of distribution modeling methods that are suited to species with small sample sizes (e.g., poorly sampled species or rare species). While these methods can also be used on well-sampled taxa, they are united by the fact that they can be utilized with relatively few data points. More details on the currently implemented methodologies can be found in Drake and Richards (2018) <doi:10.1002/ecs2.2373>, Drake (2015) <doi:10.1098/rsif.2015.0086>, and Drake (2014) <doi:10.1890/ES13-00202.1>.
 Depends: 
         R (>= 3.5.0)
 License: MIT + file LICENSE

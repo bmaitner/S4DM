@@ -4,7 +4,7 @@
 #' @param presence_data dataframe of covariates
 #' @param background_data dataframe of covariates
 #' @param projection_data dataframe of covariates
-#' @param f Maxnet formula to use. Default (NULL) will use the Maxnet default.
+#' @param formula Maxnet formula to use. Default (NULL) will use the Maxnet default. This parameter is called "f" in the maxnet function, but is renamed here as using "t" and "f" as object names is frowned upon.
 #' @param regmult Maxnet regularization multiplier. Default is 1.
 #' @param regfun Maxnet regularization function. Default is the Maxnet default.
 #' @param addsamplestobackground If TRUE (the default), any presences that aren't in the background will be added.
@@ -20,11 +20,11 @@
 dr_maxnet <- function(presence_data = NULL,
                       background_data = NULL,
                       projection_data = NULL,
-                      f = NULL,
+                      formula = NULL,
                       regmult = 1,
                       regfun = maxnet.default.regularization,
-                      addsamplestobackground = T,
-                      clamp = T,
+                      addsamplestobackground = TRUE,
+                      clamp = TRUE,
                       verbose = FALSE,
                       method,
                       type = c("link", "exponential", "cloglog", "logistic"),
@@ -57,14 +57,14 @@ dr_maxnet <- function(presence_data = NULL,
                                          background_data))
 
     # Specify formula
-    if(is.null(f)) {
-      f <- maxnet.formula(pa_vector, pa_covariates)
+    if(is.null(formula)) {
+      formula <- maxnet.formula(pa_vector, pa_covariates)
         }
 
     #Fit model
     ratio  <- maxnet(p = pa_vector,
                              data = pa_covariates,
-                             f = f,
+                             f = formula,
                              regmult = regmult,
                              regfun = regfun,
                              addsamplestobackground = addsamplestobackground)

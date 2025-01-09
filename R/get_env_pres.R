@@ -4,6 +4,7 @@
 #' @param coords Coordinates (long,lat) to extract values for
 #' @param env Environmental SpatRaster(s) in any projection
 #' @param env_bg Background data produced by `get_env_bg`, used for re-scaling
+#' @returns A list containing 1) the environmental data at the presence locations (env), and 2) an sf data.frame containing the occurrence records(occurrence_sf).
 #' @importFrom terra extract
 #' @importFrom sf st_as_sf st_crs st_transform
 #' @export
