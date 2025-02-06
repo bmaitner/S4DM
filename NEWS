@@ -1,4 +1,14 @@
 ===============
+# S4DM 0.0.2
+===============
+
+## NEW FEATURES
+* Added a new argument for project_plug_and_play that, by default, sets the RoR to zero where the background fx is zero.
+
+## Bug fixes
+
+
+===============
 # S4DM 0.0.1
 ===============
 

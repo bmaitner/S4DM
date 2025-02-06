@@ -3,10 +3,13 @@
 #' @description This function projects fitted plug-and-play species distribution models onto new covariates.
 #' @param pnp_model A fitted plug-and-play model produced by `fit_plug_and_play`
 #' @param data covariate data
+#' @param bg_zero_ror_zero Logical. Default = TRUE. If the background is zero, set the ROR to zero. This will prevent NaN and Inf values which would otherwise interfere with AUC calculations.
 #' @return A vector of relative occurrence rates evaluated at the covariates supplied in the data object.
 #' @export
 #' @note The tsearchn function underlying rangebagging seems to fail sometimes with very uneven predictors. Rescaling helps.
-project_plug_and_play <- function(pnp_model, data) {
+project_plug_and_play <- function(pnp_model,
+                                  data,
+                                  bg_zero_ror_zero = TRUE){
 
   #Check that pnp_model is the correct class
 
@@ -103,8 +106,16 @@ project_plug_and_play <- function(pnp_model, data) {
   }
 
   #If a full presence/background model
-  return(S = exp(f1_est - f0_est))
 
 
+  pnp_prediciton = exp(f1_est - f0_est)
+
+  if(bg_zero_ror_zero){
+
+    pnp_prediciton[f0_est == -Inf] <- 0
+
+  }
+
+  return(S = pnp_prediciton)
 
 }

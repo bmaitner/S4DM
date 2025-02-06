@@ -4,12 +4,14 @@
 \alias{project_plug_and_play}
 \title{Projects fitted plug-and-play distribution models onto new covariates.}
 \usage{
-project_plug_and_play(pnp_model, data)
+project_plug_and_play(pnp_model, data, bg_zero_ror_zero = TRUE)
 }
 \arguments{
 \item{pnp_model}{A fitted plug-and-play model produced by \code{fit_plug_and_play}}
 
 \item{data}{covariate data}
+
+\item{bg_zero_ror_zero}{Logical. Default = TRUE. If the background is zero, set the ROR to zero. This will prevent NaN and Inf values which would otherwise interfere with AUC calculations.}
 }
 \value{
 A vector of relative occurrence rates evaluated at the covariates supplied in the data object.
