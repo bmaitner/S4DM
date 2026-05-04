@@ -134,7 +134,7 @@ get_response_curves <- function(env_bg,
 
         }
 
-        pd_newdat <- data.frame(y = f1_est/length(pnp_model$f1) %>%
+        pd_newdat <- data.frame(y = f1_est/length(pnp_model$f1) |>
                                   exp())
 
 
@@ -169,7 +169,7 @@ get_response_curves <- function(env_bg,
 
         }
 
-        bgd_newdat <- data.frame(y = f0_est/length(pnp_model$f0) %>% exp())
+        bgd_newdat <- data.frame(y = f0_est/length(pnp_model$f0) |> exp())
 
 
       }else{
@@ -196,7 +196,7 @@ get_response_curves <- function(env_bg,
 
       pd_newdat <- approx(x = pd[[best.var[k]]]$x,
                           y = pd[[best.var[k]]]$y,
-                          xout = newdat[best.var[[k]]] %>% unlist())
+                          xout = newdat[best.var[[k]]] |> unlist())
 
       pd_newdat$y[which(is.na(pd_newdat$y))] <- 0
 
@@ -209,7 +209,7 @@ get_response_curves <- function(env_bg,
       # estimate background density at new points
       bgd_newdat <- approx(x = bgd[[best.var[k]]]$x,
                            y = bgd[[best.var[k]]]$y,
-                           xout = newdat[best.var[[k]]] %>% unlist())
+                           xout = newdat[best.var[[k]]] |> unlist())
 
       bgd_newdat$y[which(is.na(bgd_newdat$y))] <- 0
 
@@ -220,14 +220,14 @@ get_response_curves <- function(env_bg,
 
 
     out_k <- data.frame(variable = best.var[[k]],
-               x_values = newdat[best.var[[k]]] %>% unname(),
+               x_values = newdat[best.var[[k]]] |> unname(),
                prediction = pr,
                background_density = bgd_newdat$y,
                presence_density = pd_newdat$y
-               ) %>%`rownames<-`(NULL)
+               ) |>`rownames<-`(NULL)
 
-    # out_k %>%
-    #   mutate(std_pred = prediction/sum(prediction)*sum(background_density))%>%
+    # out_k |>
+    #   mutate(std_pred = prediction/sum(prediction)*sum(background_density))|>
     #   ggplot(mapping = aes(x=x_values,
     #                        y=std_pred))+
     #   geom_line(color="blue",size=1.5)+
@@ -236,7 +236,7 @@ get_response_curves <- function(env_bg,
     #   ylab(NULL)+
     #   xlab(best.var[[k]])
 
-    marginal_vals <- marginal_vals %>%
+    marginal_vals <- marginal_vals |>
       dplyr::bind_rows(out_k)
 
   }

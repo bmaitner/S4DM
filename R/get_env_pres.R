@@ -51,7 +51,7 @@ get_env_pres <- function(coords, env, env_bg = NULL) {
   # transform crs to match environmental data
 
     coords <-
-    coords %>%
+    coords |>
       st_transform(crs = st_crs(env))
 
   # Get env data

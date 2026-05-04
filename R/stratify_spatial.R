@@ -61,11 +61,11 @@ stratify_spatial <- function(occurrence_sf,
       #Small number of occs
       if (n > 5 & n <= 15) {
 
-        folds.tmp <- kmeans(x = occurrence_sf %>% st_coordinates(),
+        folds.tmp <- kmeans(x = occurrence_sf |> st_coordinates(),
                             centers = 5)
 
         folds.tmp1 <- flexclust::as.kcca(folds.tmp,
-                                         data = occurrence_sf %>% st_coordinates())
+                                         data = occurrence_sf |> st_coordinates())
 
         occurrence_sf$fold = folds.tmp$cluster
 
@@ -74,11 +74,11 @@ stratify_spatial <- function(occurrence_sf,
       #Medium number
       if (n > 15 & n <= 30) {
 
-        folds.tmp <- kmeans(x = occurrence_sf %>% st_coordinates(),
+        folds.tmp <- kmeans(x = occurrence_sf |> st_coordinates(),
                             centers = 10)
 
         folds.tmp1 <- flexclust::as.kcca(folds.tmp,
-                                         data= occurrence_sf %>% st_coordinates())
+                                         data= occurrence_sf |> st_coordinates())
 
         folds <- folds2 <- folds.tmp$clust
 
@@ -98,11 +98,11 @@ stratify_spatial <- function(occurrence_sf,
       #Large
       if (n > 30 & n <= 45) {
 
-        folds.tmp <- kmeans(x = occurrence_sf %>% st_coordinates(),
+        folds.tmp <- kmeans(x = occurrence_sf |> st_coordinates(),
                             centers = 15)
 
         folds.tmp1 <- flexclust::as.kcca(folds.tmp,
-                                         data = occurrence_sf %>% st_coordinates())
+                                         data = occurrence_sf |> st_coordinates())
 
         folds <- folds2 <- folds.tmp$clust
 
@@ -121,11 +121,11 @@ stratify_spatial <- function(occurrence_sf,
       #Extra large yields 5 folds
       if (n > 45 & n <= 60) {
 
-        folds.tmp <- kmeans(x = occurrence_sf %>% st_coordinates(),
+        folds.tmp <- kmeans(x = occurrence_sf |> st_coordinates(),
                             centers = 20)
 
         folds.tmp1 <- flexclust::as.kcca(folds.tmp,
-                                         data = occurrence_sf %>% st_coordinates())
+                                         data = occurrence_sf |> st_coordinates())
 
         folds <- folds2 <- folds.tmp$clust
 
@@ -146,10 +146,10 @@ stratify_spatial <- function(occurrence_sf,
 
       if (n > 60) {
 
-        folds.tmp <- kmeans(occurrence_sf %>% st_coordinates(),25)
+        folds.tmp <- kmeans(occurrence_sf |> st_coordinates(),25)
 
         folds.tmp1 <- flexclust::as.kcca(folds.tmp,
-                                         data = occurrence_sf %>% st_coordinates())
+                                         data = occurrence_sf |> st_coordinates())
 
         folds <- folds2 <- folds.tmp$clust
 
@@ -172,7 +172,7 @@ stratify_spatial <- function(occurrence_sf,
         stop('you must specify nsubclusters')
       }
 
-      folds.tmp <- kmeans(x = occurrence_sf %>% st_coordinates(),
+      folds.tmp <- kmeans(x = occurrence_sf |> st_coordinates(),
                           centers = nsubclusters)
 
       folds <- folds2 <- folds.tmp$clust

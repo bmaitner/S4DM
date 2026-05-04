@@ -217,9 +217,9 @@ evaluate_range_map <- function(occurrences,
                     fold_presence_cells <-
                       extract(x = template,
                               y = presence_data$occurrence_sf[which(presence_data$occurrence_sf$fold != i),],
-                              ID = FALSE) %>%
-                      unique() %>%
-                      unlist() %>%
+                              ID = FALSE) |>
+                      unique() |>
+                      unlist() |>
                       as.numeric()
 
                     fold_pseudoabscence_cells <- setdiff(x = bg_data$bg_cells,
@@ -228,9 +228,9 @@ evaluate_range_map <- function(occurrences,
                     fold_testing_cells <-
                       extract(x = template,
                               y = presence_data$occurrence_sf[which(presence_data$occurrence_sf$fold == i),],
-                              ID = FALSE) %>%
-                      unique() %>%
-                      unlist() %>%
+                              ID = FALSE) |>
+                      unique() |>
+                      unlist() |>
                       as.numeric()
 
                     #length(bg_data$bg_cells) == length(fold_presence_cells)+length(fold_pseudoabscence_cells)
@@ -388,12 +388,12 @@ evaluate_range_map <- function(occurrences,
                         full_suitability_v_occurrence <-
                           rbind(data.frame(suitability = extract(x = prediction_raster,
                                                                  y = presence_data$occurrence_sf,
-                                                                 ID = FALSE)%>%
-                                             unlist() %>%
+                                                                 ID = FALSE)|>
+                                             unlist() |>
                                              as.vector(),
                                            occurrence = 1),
-                                data.frame(suitability = prediction_raster[bg_data$bg_cells]%>%
-                                             unlist()%>%
+                                data.frame(suitability = prediction_raster[bg_data$bg_cells]|>
+                                             unlist()|>
                                              as.vector(),
                                            occurrence = 0))
 

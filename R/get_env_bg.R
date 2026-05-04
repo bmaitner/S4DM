@@ -66,7 +66,7 @@ get_env_bg <- function(coords,
   #convert to env raster projection
 
     coords <-
-      coords %>%
+      coords |>
       st_transform(crs = st_crs(env))
 
   #set buffer size based on coordinate distances if distance null
@@ -77,7 +77,7 @@ get_env_bg <- function(coords,
 
     #width <- max(dists[which(dists > 0)]) #commenting this out because I don't remember why I had that > 0 in there...
 
-    width <- max(dists) %>% as.numeric()
+    width <- max(dists) |> as.numeric()
 
     rm(dists)
 
@@ -97,14 +97,14 @@ get_env_bg <- function(coords,
       #convert to env raster projection
 
         constraint_regions <-
-        constraint_regions %>%
-          st_transform(crs = st_crs(env)) %>%
+        constraint_regions |>
+          st_transform(crs = st_crs(env)) |>
           st_make_valid()
 
         suppressWarnings(
-        buff <- st_intersection(x = buff %>%
+        buff <- st_intersection(x = buff |>
                           st_as_sf(),
-                        y = constraint_regions[coords,]) %>% vect()
+                        y = constraint_regions[coords,]) |> vect()
         )
 
       } # end constraint region bit
