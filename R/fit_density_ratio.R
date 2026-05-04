@@ -6,7 +6,7 @@
 #' @param background Dataframe of covariates at background points
 #' @param method Character. See "notes" for options.
 #' @param ... Additional parameters passed to internal functions.
-#' @details Current methods include: "ulsif", "rulsif", "maxnet"
+#' @details Current methods include: "ulsif", "rulsif", "kliep", "maxnet"
 #' @return List of class "dr_model" containing model objects and metadata needed for projecting the fitted models.
 #' @export
 #' @importFrom Rdpack reprompt

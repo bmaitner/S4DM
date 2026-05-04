@@ -23,7 +23,7 @@ This function fits density-ratio species distribution models for
 the specified density-ratio method \insertCite{Drake2018-ha}{S4DM}.
 }
 \details{
-Current methods include: "ulsif", "rulsif", "maxnet"
+Current methods include: "ulsif", "rulsif", "kliep", "maxnet"
 }
 \examples{
 \donttest{

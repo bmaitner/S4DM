@@ -23,7 +23,7 @@ test_that("fit_ and project_density_ratio return correct format", {
 
   out <- fit_density_ratio(presence = pres$env,
                            background = bg$env,
-                           method = "rulsif")
+                           method = "kliep")
 
   expect_equal(object = length(out),
                expected = 2)
