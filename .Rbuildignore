@@ -10,3 +10,5 @@ S4DM.Rproj
 .git
 .github
 ^CRAN-SUBMISSION$
+^\.positai$
+^\.claude$
