@@ -12,3 +12,6 @@ S4DM.Rproj
 ^CRAN-SUBMISSION$
 ^\.positai$
 ^\.claude$
+revdep
+revdep/
+docs
