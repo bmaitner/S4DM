@@ -20,7 +20,7 @@ List of class "dr_model" containing model objects and metadata needed for projec
 }
 \description{
 This function fits density-ratio species distribution models for
-the specified density-ratio method \insertCite{Drake2018-ha}{S4DM}.
+the specified density-ratio method \insertCite{Drake2018-ha,Maitner2026-bc}{S4DM}.
 }
 \details{
 Current methods include: "ulsif", "rulsif", "kliep", "maxnet"

@@ -50,6 +50,7 @@ List object containing elements (1) spatRaster ensemble layer showing the propor
 \description{
 This function evaluates model quality and creates an ensemble of the model outputs.
 This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality.
+Ensembles of algorithms spanning the sensitivity-specificity gradient can improve predictions for poorly sampled species \insertCite{Maitner2026-bc}{S4DM}.
 }
 \details{
 Current plug-and-play methods include: "gaussian", "kde","vine","rangebagging", "lobagoc", and "none".

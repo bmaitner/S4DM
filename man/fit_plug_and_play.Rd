@@ -38,7 +38,7 @@ or "doublebag" (presence and background functions are bootstrapped).}
 List of class "pnp_model" containing model objects and metadata needed for projecting the fitted models.
 }
 \description{
-This function fits presence-background species distribution models for the specified plug-and-play methods \insertCite{Drake2018-ha,Drake2015-sb}{S4DM}.
+This function fits presence-background species distribution models for the specified plug-and-play methods \insertCite{Drake2018-ha,Drake2015-sb,Maitner2026-bc}{S4DM}.
 }
 \details{
 Current methods include: "gaussian", "kde","vine","rangebagging", "lobagoc", and "none".
