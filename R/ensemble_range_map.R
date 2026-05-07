@@ -1,7 +1,8 @@
 #' @name ensemble_range_map
 #' @title Generate ensemble predictions from S4DM range maps
 #' @description This function evaluates model quality and creates an ensemble of the model outputs.
-#' This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality.
+#' This function uses 5-fold, spatially stratified, cross-validation to evaluate distribution model quality. 
+#' Ensembles of algorithms spanning the sensitivity-specificity gradient can improve predictions for poorly sampled species \insertCite{Maitner2026-bc}{S4DM}.
 #' @param occurrences Presence coordinates in long,lat format.
 #' @param env Environmental SpatRaster(s)
 #' @param method Optional. If supplied, both presence and background density estimation will use this method.

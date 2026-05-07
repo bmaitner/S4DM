@@ -1,6 +1,6 @@
 #' @name fit_plug_and_play
 #' @title Fit presence-background distribution models in a plug-and-play framework.
-#' @description This function fits presence-background species distribution models for the specified plug-and-play methods \insertCite{Drake2018-ha,Drake2015-sb}{S4DM}.
+#' @description This function fits presence-background species distribution models for the specified plug-and-play methods \insertCite{Drake2018-ha,Drake2015-sb,Maitner2026-bc}{S4DM}.
 #' @param presence dataframe of covariates at presence points
 #' @param background Optional. Dataframe of covariates at background points
 #' @param method Optional. If supplied, both presence and background density estimation will use this method.
