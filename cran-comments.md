@@ -14,3 +14,7 @@
 ## Notes
 
 * This update addresses changes in a dependency (sf) which no longer exports %>%
+
+## Response to previous comments
+
+* I've updated the references to use DOIs for stability
